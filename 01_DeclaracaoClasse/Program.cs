@@ -193,15 +193,15 @@ namespace _01_DeclaracaoClasse
 
         public string Mencao() 
         { 
-            if (CalcularMedia() >= 5)
-            {
-                return "Aprovado";
-            }
-            else
-            {
-                return "Reprovado";
-            }
-
+            //if (CalcularMedia() >= 5)
+            //{
+            //    return "Aprovado";
+            //}
+            //else
+            //{
+            //    return "Reprovado";
+            //}
+            return (CalcularMedia() >= 5) ? "Aprovado" : "Reprovado";
         }
     }
 }
