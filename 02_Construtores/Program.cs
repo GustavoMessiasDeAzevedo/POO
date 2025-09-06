@@ -10,8 +10,11 @@ namespace _02_Construtores
     {
         static void Main(string[] args)
         {
-            Quadrado quadrado = new Quadrado(5);
+            Quadrado quadrado = new Quadrado(29);
             quadrado.ImprimirArea();
+            
+            Quadrado quadradoConstrutor = new Quadrado();
+            quadradoConstrutor.ImprimirArea();
 
             Retangulo retangulo = new Retangulo(14, 74);
             retangulo.ImprimirArea();
@@ -28,6 +31,14 @@ namespace _02_Construtores
     {
         //Pode ser usado só dentro da classe (private)
         private int Lado;
+
+
+        //Overload
+
+        public Quadrado()
+        {
+            this.Lado = 5;
+        }
 
         public Quadrado(int Lado)
         {
