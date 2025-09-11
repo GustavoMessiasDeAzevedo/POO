@@ -35,14 +35,15 @@ namespace _02_Construtores
 
         //Overload
 
-        public Quadrado()
+        public Quadrado():this(5)
         {
-            this.Lado = 5;
+            //this.Lado = 5;
         }
 
         public Quadrado(int Lado)
         {
-            this.Lado = Lado;
+            if(Lado > 0)
+                this.Lado = Lado;
         }
 
         public int CalculaArea() 
