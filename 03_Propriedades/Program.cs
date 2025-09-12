@@ -57,7 +57,7 @@ namespace _03_Propriedades
     public class Conta
     {
         private string numero { get; }
-        private string nome { get; }        //public decimal Saldo;        
+        private string nome     //public decimal Saldo;        
         private decimal saldo;
         //metodos acessadores
         public decimal getSaldo()
@@ -79,6 +79,11 @@ namespace _03_Propriedades
         public string getNome()
         {
             return nome;
+        }
+
+        public void setNome(string nome)
+        {
+            this.nome = nome;
         }
         public void setSaldo(decimal saldo)
         {
