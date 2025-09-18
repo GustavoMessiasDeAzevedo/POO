@@ -12,7 +12,7 @@ namespace _08_Aluno
         {
 
             Aluno gustavo = new Aluno("Gustavo Messias", 18, 8, 7);
-            gustavo.Resultado();
+            Console.WriteLine($"O aluno {gustavo.Nome}, teve a média de {gustavo.Media}, sendo assim ele foi {gustavo.Situacao}");
 
 
         }
@@ -68,11 +68,6 @@ namespace _08_Aluno
                     else
                         return "Reprovado";
                 }
-            }
-
-            public void Resultado()
-            {
-                Console.WriteLine($"Nome: {nome}, Idade: {idade} anos, sua média foi de: {Media} e você foi: {Situacao}");
             }
 
         }
