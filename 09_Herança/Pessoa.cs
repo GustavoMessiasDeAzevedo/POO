@@ -14,7 +14,7 @@ namespace _09_Herança
 
         public void Imprimir()
         {
-            Console.WriteLine($"Nome: {this.Nome} Documento: {this.GetDocumento()}");
+            Console.WriteLine($"LISTA DE PESSOAS \n\nNome: {this.Nome} Documento: {this.GetDocumento()}");
         }
     }
 }
