@@ -9,12 +9,13 @@ namespace _09_Herança
     public abstract class Pessoa
     {
         public string Nome;
+        public string Telefone;
 
         public abstract string GetDocumento();
 
         public void Imprimir()
         {
-            Console.WriteLine($"LISTA DE PESSOAS \n\nNome: {this.Nome} Documento: {this.GetDocumento()}");
+            Console.WriteLine($"LISTA DE PESSOAS \n\nNome: {this.Nome} Documento: {this.GetDocumento()} Telefone: {this.Telefone}");
         }
     }
 }
