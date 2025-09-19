@@ -25,7 +25,7 @@ namespace _08_Aluno
             Console.WriteLine("Digite a segunda nota do aluno: ");
             aluno.Nota2 = double.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Nome: {aluno.Nome} Idade: {aluno.Idade} 1° Nota: {aluno.Nota1} 2° Nota: {aluno.Nota2} Media: {aluno.Media} Situação: {aluno.Situacao}");
+            Console.WriteLine($"Nome: {aluno.Nome} Idade: {aluno.Idade}  1° Nota: {aluno.Nota1} 2° Nota: {aluno.Nota2} Media: {aluno.Media} Situação: {aluno.Situacao}");
 
 
         }
@@ -45,7 +45,7 @@ namespace _08_Aluno
 
             public double Nota2 { get; set; }
 
-            public string Nome { get; }
+            public string Nome { get { return nome; } }
             public int Idade
             {
                 get { return idade; }
@@ -54,6 +54,7 @@ namespace _08_Aluno
                         idade = value;
                     else
                         Console.WriteLine("Idade inválida");
+                    
                 }
             }
 
