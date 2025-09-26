@@ -104,6 +104,10 @@ namespace _10_Colecoes
             {
                 Console.WriteLine($" - {nome}");
             }
+
+
+
+            List<string> nome = new List<string>();
         }
     }
 
