@@ -16,7 +16,7 @@ namespace _10_Colecoes
             nomes.Add("Bianca");
 
             List<Aluno> alunos = new List<Aluno>();
-            Aluno gustavo = new Aluno { id = 1, nome = "Gustavo"};
+            Aluno gustavo = new Aluno { id = 1, nome = "Gustavo" };
             AlunoEspecial bianca = new AlunoEspecial { id = 2, nome = "Bianca", Deficiencia = "Visual" };
             alunos.Add(gustavo);
             alunos.Add(bianca);
@@ -25,7 +25,7 @@ namespace _10_Colecoes
             nomes.Add(gustavo.nome);
 
             Console.WriteLine("Impressão dos nomes");
-            foreach(string nome in nomes)
+            foreach (string nome in nomes)
             {
                 Console.WriteLine(nome);
             }
@@ -40,9 +40,9 @@ namespace _10_Colecoes
             dicNomes.Add(1, "Gustavo");
             dicNomes.Add(2, "Bianca");
             dicNomes.Add(3, "Giovana");
-            
+
             //Não pode adicionar chave repetida
-            
+
             Console.WriteLine("\nImpressão dos dicNomes");
 
             for (int i = 1; i <= dicNomes.Count; i++)
@@ -61,10 +61,50 @@ namespace _10_Colecoes
             //    dicAlunos[i].ImprimirAluno();
             //}
 
-            foreach(Aluno aluno in dicAlunos.Values)
+            foreach (Aluno aluno in dicAlunos.Values)
             {
                 aluno.ImprimirAluno();
             }
+
+
+            Queue<string> filaNomes = new Queue<string>();
+            filaNomes.Enqueue("Gustavo");
+            filaNomes.Enqueue("Bianca");
+            filaNomes.Enqueue("Giovana");
+
+            Console.WriteLine("\nImpressão dos filaNomes");
+            Console.WriteLine($" 1°) {filaNomes.Dequeue()}")
+                ;
+
+            foreach (String nome in filaNomes)
+            {
+                Console.WriteLine($" - {nome}");
+            }
+
+            Stack<string> stackNomes = new Stack<string>();
+            stackNomes.Push("Gustavo");
+            stackNomes.Push("Bianca");
+            stackNomes.Push("Giovana");
+
+            Console.WriteLine("\nImpressão dos stackNomes");
+            Console.WriteLine($" Último a entrar, primeiro a sair: {stackNomes.Pop()}");
+            foreach (String nome in stackNomes)
+            {
+                Console.WriteLine($" - {nome}");
+            }
+
+            HashSet<string> setNomes = new HashSet<string>();
+            setNomes.Add("Gustavo");
+            setNomes.Add("Bianca");
+            setNomes.Add("Giovana");
+
+            setNomes.Add("Gustavo"); //não adiciona repetido
+            Console.WriteLine("\nImpressão dos setNomes");
+            foreach (String nome in setNomes)
+            {
+                Console.WriteLine($" - {nome}");
+            }
+        }
     }
 
 
