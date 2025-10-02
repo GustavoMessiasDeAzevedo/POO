@@ -78,7 +78,7 @@ namespace _17_Calendario
                         }*/
 
                         //if (ehFeriado || diaSemana == 0)
-                        if(diasFeriados.Any(feriado => feriado != null && feriado.Dia == calendario[semana,diaSemana]) || diaSemana == 0)
+                        if(diasFeriados.Any(feriado => feriado != null && feriado.Dia == calendario[semana,diaSemana]) ||  (DiaSemana)diaSemana == DiaSemana.Domingo)
                             Console.ForegroundColor = ConsoleColor.Red;
 
                         Console.Write(calendario[semana, diaSemana].ToString("D2") + "\t");
@@ -101,6 +101,7 @@ namespace _17_Calendario
                     Console.Write($"{diasFeriados[i].ToString("D2")}\t");
                 }
             }*/
+            diasFeriados.Sort();
 
             foreach (Feriado diaFeriado in diasFeriados)
             {
@@ -120,8 +121,8 @@ namespace _17_Calendario
             if (mes == Mes.Janeiro) feriados.Add(new Feriado(1, "Confraternização universal"));
             else if (mes == Mes.Abril)
             {
-                feriados.Add(new Feriado(4, "Aniversário da cidade"));
-                feriados.Add(new Feriado (21, "Tiradentes"));
+                feriados.Add(new Feriado(21, "Aniversário da cidade"));
+                feriados.Add(new Feriado (4, "Tiradentes"));
             }
             else if (mes == Mes.Maio) feriados.Add(new Feriado(1, "Dia do trabalho"));
             else if (mes == Mes.Junho) feriados.Add(new Feriado(1, "Revolução constitucionalista de São paulo"));

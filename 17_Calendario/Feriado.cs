@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _17_Calendario
 {
-    internal class Feriado
+    internal class Feriado : IComparable<Feriado>
     {
         public int Dia { get; set; }
 
@@ -17,6 +17,13 @@ namespace _17_Calendario
         {
             Dia = dia;
             Descricao = descricao;
+        }
+
+        public int CompareTo(Feriado other)
+        {
+            if (other == null) return 1;
+
+            return other.Dia.CompareTo(this.Dia);
         }
 
 
