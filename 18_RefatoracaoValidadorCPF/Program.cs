@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _18_RefatoracaoValidadorCPF
+namespace _20_ValidaCPFComExcecao
 {
     internal class Program
     {

@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _20_ValidaCPFComExcecao
+namespace _21_ValidaCPNJComExcecao
 {
-    public interface IDocumento 
+    public interface IDocumento
     {
-       string Numero { get; }
-
-       bool Validar();
+        string Numero { get; }
+        bool Validar();
     }
-
 }

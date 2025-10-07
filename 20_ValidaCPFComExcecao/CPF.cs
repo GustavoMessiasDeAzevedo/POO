@@ -16,6 +16,12 @@ namespace _20_ValidaCPFComExcecao
        public CPF(string numero)
         {
             Numero = Regex.Replace(numero, @"[^0-9]", "");
+
+            if(Numero.Length != 11)
+                throw new CPFQtdeDigitosException();
+
+            if (this.Numero.Distinct().Count() == 1)
+                throw new Exception("CPF INVÁLIDO! Não pode conter todos os dígitos iguais.");
         }
 
 
@@ -48,12 +54,12 @@ namespace _20_ValidaCPFComExcecao
                 int digito2 = (resto < 2) ? 0 : 11 - resto;
                 if (digito1 == numeroCPF[9] && digito2 == numeroCPF[10])
                 {
-                    Console.WriteLine("CPF VÁLIDO!");
+                    //Console.WriteLine("CPF VÁLIDO!");
                     return true;
                 }
                 else
                 {
-                    Console.WriteLine("CPF INVÁLIDO!");
+                    //Console.WriteLine("CPF INVÁLIDO!");
                     return false;
                 }
             }
